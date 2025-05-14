@@ -15,11 +15,18 @@
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
   </head>
   <body>
-    <header >
-      <nav class="navbar navbar-expand-lg " style="background-color: rgb(221, 38, 250);">
+    <header>
+      <!-- Menu -->
+      <nav
+        class="navbar navbar-expand-lg"
+        style="background-color: rgb(221, 38, 250)"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">WEB2072.02</a>
           <button
@@ -36,7 +43,9 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Trang chủ</a>
+                <a class="nav-link active" aria-current="page" href="#"
+                  ><i class="bi bi-house"></i> Trang chủ</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sản phẩm</a>
@@ -81,6 +90,43 @@
           </div>
         </div>
       </nav>
+
+      <!-- Banner -->
+      <div
+        id="carouselExampleAutoplaying"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div data-bs-interval="2000" class="carousel-item active">
+            <img style="height: 400px;" src="https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2024/11/tai-hinh-nen-dep-mien-phi-10.jpg.webp" class="d-block w-100 object-fit-cover" alt="..." />
+          </div>
+          <div data-bs-interval="2000" class="carousel-item">
+            <img style="height: 400px;" src="https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2024/11/tai-hinh-nen-dep-mien-phi-13.jpg.webp" class="d-block w-100 object-fit-cover" alt="..." />
+          </div>
+          <div data-bs-interval="2000" class="carousel-item">
+            <img style="height: 400px;" src="https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2024/11/tai-hinh-nen-dep-mien-phi-14.jpg.webp" class="d-block w-100 object-fit-cover" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplaying"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </header>
     <main class="bg-primary" style="height: 700px">Content</main>
     <footer class="bg-success" style="height: 400px">Footer</footer>
