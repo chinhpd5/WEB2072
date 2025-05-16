@@ -43,6 +43,15 @@
 ```
 ---
 
+### Thêm thư viện bootstrap
+
+- Cài đặt, mở terminal: `npm i bootstrap`
+- Tại `src/main.js` thêm nội dung:
+```js
+  import 'bootstrap/dist/css/bootstrap.min.css'
+  import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+```
+
 ### 2. ref và reactive
 - Với Vue3, ref và reactive đều được dùng để tạo biến, có thể reactive (phản ứng khi thay đổi - quản lý) trong Composition API
 
