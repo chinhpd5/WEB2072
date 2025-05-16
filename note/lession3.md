@@ -1,0 +1,118 @@
+# Giới thiệu Vue.js
+
+[Vue.js](https://vuejs.org/) là một framework JavaScript tiến bộ dùng để xây dựng giao diện người dùng. 
+- Vue tập trung vào lớp giao diện và rất dễ tích hợp với các thư viện hoặc project hiện có. 
+- Vue cũng có thể được sử dụng để xây dựng các ứng dụng đơn trang (SPA) mạnh mẽ khi kết hợp với các thư viện hiện đại và công cụ build.
+
+## Single Page Application (SPA) là gì?
+- SPA là viết tắt của Single Page Application – tức là Ứng dụng một trang.
+- Ứng dụng web mà toàn bộ nội dung được hiển thị trong một trang HTML duy nhất, và không cần tải lại trang khi người dùng điều hướng giữa các phần khác nhau
+
+## Tính năng chính
+
+- Kết hợp HTML, CSS và JavaScript một cách linh hoạt.
+- Virtual DOM giúp tăng hiệu suất render.
+- Reactivity system mạnh mẽ.
+- Cấu trúc component giúp tái sử dụng mã dễ dàng.
+- Dễ học nhưng có thể mở rộng cho ứng dụng lớn.
+
+---
+
+## Bắt đầu với Vue 3
+
+### Yêu cầu
+
+- Node.js >= 14
+- [Tải NodeJS](https://nodejs.org/en/download)
+- npm hoặc yarn
+
+### 1. Khởi tạo project với Vite (đề xuất cho Vue 3)
+- Mở terminal:
+```bash
+  npm create vite@latest
+```
+- Làm theo hướng dẫn hoặc
+```bash
+  npm create vite@latest my-vue-app -- --template vue
+```
+- Di chuyển vào dự án, cài đặt thư viện, khởi chạy dự án
+```bash
+  cd my-vue-app
+  npm install
+  npm run dev
+```
+---
+
+### 2. ref và reactive
+- Với Vue3, ref và reactive đều được dùng để tạo biến, có thể reactive (phản ứng khi thay đổi - quản lý) trong Composition API
+
+- ref
+```js
+  import { ref } from 'vue'
+
+  const count = ref(0)     // số
+  const name = ref('Vue3')  // chuỗi
+  const gender = ref(true)  // boolean
+```
+  + ref tạo ra một đối tượng `.value`.
+  + Vue theo dõi `.value` và tự động cập nhật giao diện khi nó thay đổi.
+  + Có thể dùng được cho mọi kiểu dữ liệu: number, string, boolean, object, array, v.v. Tuy nhiên khuyến cáo sử dụng cho các kiểu dữ liệu đơn giản: number, string, boolean.
+
+- reactive
+```js
+  import { reactive } from 'vue'
+
+  const user = reactive({
+    name: 'Alice',
+    age: 25
+  })
+```
+
+  + Không cần `.value` khi truy cập.
+  + Tự động theo dõi các thuộc tính bên trong object (deep reactive).
+---
+
+## Bài tập
+Hiển thị mảng `students` theo dạng table sử dụng `bootstrap`:
+```js
+  const students = [
+  {
+    id: 1,
+    name: "Nguyễn Văn An",
+    gender: true,
+    gpa: 3.5,
+    major: "Computer Science"
+  },
+  {
+    id: 2,
+    name: "Trần Thị Bình",
+    gender: false,
+    gpa: 3.8,
+    major: "Information Systems"
+  },
+  {
+    id: 3,
+    name: "Lê Minh Dũng",
+    gender: true,
+    gpa: 3.2,
+    major: "Software Engineering"
+  },
+  {
+    id: 4,
+    name: "Phạm Ngọc Hân",
+    gender: false,
+    gpa: 3.9,
+    major: "Data Science"
+  },
+  {
+    id: 5,
+    name: "Hoàng Trung Kiên",
+    gender: true,
+    gpa: 2.9,
+    major: "Cybersecurity"
+  }
+];
+
+```
+
+
