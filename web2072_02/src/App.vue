@@ -15,6 +15,11 @@
     myText.value = '';
       
   }
+
+  const handleDelete = (index) =>{
+    // console.log(index);
+    jobs.splice(index,1);
+  }
   
 </script>
 
@@ -37,7 +42,7 @@
     <ul>
       <li v-for="(item,index) in jobs" :key="index">
         {{ item }}
-        <button class="btn btn-danger">Xóa</button>
+        <button class="btn btn-danger" @click="handleDelete(index)">Xóa</button>
       </li>
     </ul>
   </div>
