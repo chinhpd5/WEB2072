@@ -139,7 +139,29 @@ const errorClass = 'text-danger'
 ```
 - Ví dụ:
 ```vue
-Style binding giúp bạn gán CSS inline một cách động (thường dùng cho style tùy biến như màu sắc, kích thước, v.v.).
+<script setup>
+import { ref } from 'vue'
+
+const activeColor = ref('blue')
+const fontSize = ref(20)
+
+const styleObject = ref({
+  color: 'green',
+  backgroundColor: 'lightgray',
+  padding: '10px'
+})
+</script>
+
+<template>
+  <div :style="{ color: activeColor, fontSize: fontSize + 'px' }">
+    Style binding từ object trực tiếp
+  </div>
+
+  <div :style="styleObject">
+    Style binding từ biến object
+  </div>
+</template>
+
 ```
 
 
