@@ -1,102 +1,27 @@
 <script setup>
-import { reactive, ref } from "vue";
+  import {ref} from 'vue'
+  // one way binding
+  const myName = "chinhpd5";
+  const imageURL = "https://camerabox.vn/uploads/thuat-ngu-nhiep-anh.jpg"
+  const btnClass = "btn btn-primary";
 
-// ref: number, string, boolean
-const name = ref("chinhpd5");
-const count = ref(0);
-
-const increaseCount = () => {
-  count.value += 1;
-};
-
-// reactive : object, array
-const myInfo = reactive({
-  name: "Phí Đức Chính",
-  age: 20,
-  gender: false,
-});
-
-const students = reactive([
-  {
-    id: 1,
-    name: "Nguyễn Văn An",
-    gender: true,
-    gpa: 3.5,
-    major: "Computer Science",
-  },
-  {
-    id: 2,
-    name: "Trần Thị Bình",
-    gender: false,
-    gpa: 3.8,
-    major: "Information Systems",
-  },
-  {
-    id: 3,
-    name: "Lê Minh Dũng",
-    gender: true,
-    gpa: 3.2,
-    major: "Software Engineering",
-  },
-  {
-    id: 4,
-    name: "Phạm Ngọc Hân",
-    gender: false,
-    gpa: 3.9,
-    major: "Data Science",
-  },
-  {
-    id: 5,
-    name: "Hoàng Trung Kiên",
-    gender: true,
-    gpa: 2.9,
-    major: "Cybersecurity",
-  },
-]);
+  const myText = ref('')
+  
 </script>
 
 <template>
-  <div>
-    <!-- ref -->
-    <h1>Họ và tên: {{ name }}</h1>
-    <h1>Count: {{ count }}</h1>
-    <button @click="increaseCount" class="btn btn-primary">Tăng</button>
-    <!-- reactive -->
-    <h1>Họ và tên: {{ myInfo.name }}</h1>
-    <h2>Tuổi: {{ myInfo.age }}</h2>
-    <h2>Giới tính: {{ myInfo.gender ? "Nam" : "Nữ" }}</h2>
+  <div class="pb-5">
+    <!-- one way -->
+    <h1>Ràng buộc 1 chiều: {{ myName }}</h1>
+    <!-- <img v-bind:src="imageURL" v-bind:alt="myName"> -->
+    <img :src="imageURL" :alt="myName">
+    <button :class="btnClass">Click</button>
+    <hr>
 
-    <!-- table -->
-    <h1>Danh sách student</h1>
-
-    <table class="table table-bordered table-hover table-striped">
-      <thead>
-        <tr>
-          <th scope="col">STT</th>
-          <th scope="col">Tên</th>
-          <th scope="col">Giới tính</th>
-          <th scope="col">Điểm</th>
-          <th scope="col">Khoa</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">{{ students[0].id }}</th>
-          <td>{{ students[0].name }}</td>
-          <td>{{ students[0].gender }}</td>
-          <td>{{ students[0].gpa }}</td>
-          <td> {{ students[0].major }}</td>
-        </tr>
-        <tr>
-          <th scope="row">{{ students[1].id }}</th>
-          <td>{{ students[1].name }}</td>
-          <td>{{ students[1].gender }}</td>
-          <td>{{ students[1].gpa }}</td>
-          <td> {{ students[1].major }}</td>
-        </tr>
-        
-      </tbody>
-    </table>
+    <!-- two way -->
+    <h1>Ràng buộc 2 chiều:</h1>
+    <input type="text" v-model="myText">
+    <h1>text: {{ myText }}</h1>
   </div>
 </template>
 
