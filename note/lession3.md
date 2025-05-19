@@ -52,7 +52,7 @@
   import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 ```
 
-### 2. ref và reactive
+### 2.REACTIVITY: ref và reactive
 - Với Vue3, ref và reactive đều được dùng để tạo biến, có thể reactive (phản ứng khi thay đổi - quản lý) trong Composition API
 
 - ref
@@ -79,6 +79,7 @@
 
   + Không cần `.value` khi truy cập.
   + Tự động theo dõi các thuộc tính bên trong object (deep reactive).
+  + Chỉ áp dụng cho kiểu dữ liệu object hoặc array.
 ---
 
 ## Bài tập
