@@ -1,53 +1,36 @@
 <script setup>
-  import {ref} from 'vue'
-  const score = ref(Math.floor(Math.random()*10)*10);
 
-  const isLoggin = ref(true);
+  import { ref } from 'vue';
+  const count = ref(0)
+ 
+  const handleAlert = () =>{
+    alert("Thông báo")
+  }
 
-  const list = [
-    {name: "chinhpd5", age: 20},
-    {name: "chinhpd6", age: 21},
-    {name: "chinhpd7", age: 22},
-  ];
+  const handleIncrease = () => {
+    count.value++
+  }
 
+  const handleDecrease = () =>{
+    count.value--
+  }
+
+  const handleReset = () =>{
+    count.value = 0
+  }
 </script>
 
 <template>
   <div>
-    <h1>Điểm: {{ score }}</h1>
-    <h4>
-      Học lực: 
-      <span v-if="score >= 90">Giỏi</span>
-      <span v-else-if="score >= 70">Khá</span>
-      <span v-else-if="score >= 50">Trung bình</span>
-      <span v-else>Yếu</span>
-    </h4>
-    <hr>
+    
+    <!-- <button v-on:click="handleAlert" class="btn btn-primary">show</button> -->
+    <!-- <button @dblclick="handleAlert" class="btn btn-primary">show</button> -->
+    <h1>Count: {{ count }}</h1>
 
-    <div class="d-flex">
+    <button @click="handleIncrease" class="btn btn-primary">Tăng</button>
+    <button @click="handleDecrease" class="btn btn-danger">Giảm</button>
+    <button @click="handleReset" class="btn btn-warning">Reset</button>
 
-      <div v-show="isLoggin">
-        <div class="d-flex">
-          <h5>Xin chào, chinhpd5!</h5>
-          <button @click="isLoggin = !isLoggin" class="btn btn-outline-warning">
-            Đăng xuất
-          </button>
-        </div>
-      </div>
-
-      <button @click="isLoggin = !isLoggin" v-show="!isLoggin" class="btn btn-primary">
-        Đăng nhập
-      </button>
-    </div>
-
-    <hr>
-    <div>
-      <ul>
-        <li v-for="(item,index) in list" :key="index">
-          {{ index+1 }}| <span>Tên: {{ item.name }}</span>| <span>Tuổi: {{ item.age }}</span>
-        </li>
-      </ul>
-    </div>
 
     <div>
       <h1>Danh sách sản phẩm:</h1>
