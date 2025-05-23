@@ -33,14 +33,19 @@
     message.value = text.value
   }
 
-  const product = ref({})
+  const product = ref({
+    tags: []
+  })
+
   const handleSubmit = () =>{
     // console.log("submit!!!");
     console.log(product.value);
     
   }
-
-
+  // thêm product vào mảng product khi submit form (rating,inStock,featured,.. tạo giá trị mặc định)
+  // trước khi thêm mới kiểm tra id đã tồn tại hay chưa (nếu đã tồn tại -> thông báo, yêu cầu người thay đổi id khác)
+  // tại mỗi dòng: Thêm nút xóa
+  // thực hiện chức xóa khi click vào nút xóa
 </script>
 
 <template>
@@ -69,12 +74,17 @@
 
         <div class="mb-3">
           <label for="id" class="form-label">ID</label>
-          <input type="text" class="form-control" id="id" v-model="product.id" >
+          <input type="number" class="form-control" id="id" v-model="product.id" >
         </div>
 
         <div class="mb-3">
           <label for="name" class="form-label">Tên sản phẩm</label>
           <input type="text" class="form-control" id="name" v-model="product.name" >
+        </div>
+
+        <div class="mb-3">
+          <label for="descripton" class="form-label">Mô tả</label>
+          <textarea class="form-control" id="descripton" rows="3" v-model="product.description"></textarea>
         </div>
 
         <div class="mb-3">
@@ -103,6 +113,42 @@
             </label>
           </div>
 
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Danh mục</label>
+          <select class="form-select" v-model="product.category">
+            <option value="laptop">Laptop</option>
+            <option value="mobile">Điện thoại</option>
+            <option value="tablet">Máy tính bảng</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Hình ảnh</label>
+          <input type="text" class="form-control" id="image" v-model="product.image" >
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Tags</label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" v-model="product.tags" value="gaming" id="gaming">
+            <label class="form-check-label" for="gaming">
+              Gaming
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" v-model="product.tags" value="student" id="student">
+            <label class="form-check-label" for="student">
+              Student
+            </label>
+          </div>
+           <div class="form-check">
+            <input class="form-check-input" type="checkbox" v-model="product.tags" value="budget" id="budget">
+            <label class="form-check-label" for="budget">
+              Budget
+            </label>
+          </div>
         </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
