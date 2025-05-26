@@ -1,7 +1,80 @@
 <script setup>
-  import { ref } from 'vue';
-  import HelloComponent from './components/HelloComponent.vue';
-  
+  import { ref } from 'vue'; 
+  import Product from './components/Product.vue';
+
+  const products = [
+  {
+    id: 1,
+    name: 'Laptop Acer Aspire 7',
+    description: 'Laptop gaming giá rẻ cho sinh viên.',
+    price: 15000000,
+    inStock: true,
+    isVisible: true,
+    category: 'Laptop',
+    rating: 4.2,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2022/10/03/image-removebg-preview-60.png',
+    tags: ['gaming', 'student', 'budget'],
+    quantity: 10,
+    featured: true
+  },
+  {
+    id: 2,
+    name: 'MacBook Air M1',
+    description: 'Laptop nhẹ, hiệu năng cao cho lập trình viên.',
+    price: 22000000,
+    inStock: false,
+    isVisible: true,
+    category: 'Laptop',
+    rating: 3.8,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/11/16/mac-m1-ghi-1.png',
+    tags: ['apple', 'm1', 'developer'],
+    quantity: 0,
+    featured: false
+  },
+  {
+    id: 3,
+    name: 'Dell XPS 13',
+    description: 'Thiết kế cao cấp, hiệu năng ổn định.',
+    price: 28000000,
+    inStock: true,
+    isVisible: false,
+    category: 'Laptop',
+    rating: 2.6,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/10/17/71034921-1.png',
+    tags: ['premium', 'portable'],
+    quantity: 5,
+    featured: true
+  },
+  {
+    id: 4,
+    name: 'HP Pavilion 15',
+    description: 'Lựa chọn tầm trung cho công việc văn phòng.',
+    price: 17000000,
+    inStock: true,
+    isVisible: true,
+    category: 'Laptop',
+    rating: 4.0,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2023/12/22/hp-15s-silver-1.png',
+    tags: ['office', 'midrange'],
+    quantity: 8,
+    featured: false
+  },
+  {
+    id: 5,
+    name: 'Lenovo IdeaPad 3',
+    description: 'Máy tính xách tay cơ bản cho học sinh.',
+    price: 12000000,
+    inStock: false,
+    isVisible: false,
+    category: 'Laptop',
+    rating: 3.9,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/07/11/lenovo-loq-15iax9-83fq0005vn-1.png',
+    tags: ['basic', 'student'],
+    quantity: 0,
+    featured: false
+  },
+  ];
+
 
   const text = ref('');
   const message = ref('')
@@ -26,17 +99,18 @@
     console.log(product.value);
     
   }
-  // thêm product vào mảng product khi submit form (rating,inStock,featured,.. tạo giá trị mặc định)
-  // trước khi thêm mới kiểm tra id đã tồn tại hay chưa (nếu đã tồn tại -> thông báo, yêu cầu người thay đổi id khác)
-  // tại mỗi dòng: Thêm nút xóa
-  // thực hiện chức xóa khi click vào nút xóa
 </script>
 
 <template>
   <div>
-    <HelloComponent />
-    <HelloComponent></HelloComponent>
-    
+    <Product 
+      v-for="item in products"
+      :key="item.id"
+      :name="item.name" 
+      :price="item.price" 
+      :description="item.description" 
+    />
+
     <div>
       <!-- Sự kiện với bàn phím -->
       <input type="text" @keydown="handleKey" @keydown.enter="showMessage" v-model="text">
