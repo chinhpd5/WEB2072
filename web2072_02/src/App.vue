@@ -95,12 +95,17 @@ import ProductAdd from './components/ProductAdd.vue';
     alert("Thêm thành công")
 
   }
+
+  const handleDelete = (value) =>{
+    // console.log(value);
+    products.value = products.value.filter(item => item.id != value)
+  }
   
 </script>
 
 <template>
   <div>
-    <ProductList :productsList="products" />
+    <ProductList :productsList="products" @deleteProduct="handleDelete" />
     <ProductAdd @pushProduct="handleAdd"/>
     
   </div>

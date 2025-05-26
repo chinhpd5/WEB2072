@@ -32,7 +32,7 @@
             </span>
           </td>
           <td>
-            <button class="btn btn-danger">Xóa</button>
+            <button @click="handleDelete(item.id)" class="btn btn-danger">Xóa</button>
           </td>
         </tr>
         
@@ -45,6 +45,12 @@
 const props = defineProps({
   productsList: Array,
 });
+
+const emit = defineEmits(['deleteProduct'])
+
+const handleDelete = (id) =>{
+  emit('deleteProduct',id)
+}
 </script>
 
 <style></style>
