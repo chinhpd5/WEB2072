@@ -47,7 +47,7 @@ import { onBeforeMount, onMounted } from 'vue';
 // onBeforeMount: gọi trước khi component mount
 onBeforeMount(()=>{
   console.log("Component sắp được mount");
-  const isLogin = false;
+  const isLogin = true;
   if(!isLogin){
     alert("bạn chưa đăng nhập")
     // truyển về trang login
