@@ -42,6 +42,24 @@
 </template>
 
 <script setup>
+import { onBeforeMount, onMounted } from 'vue';
+
+// onBeforeMount: gọi trước khi component mount
+onBeforeMount(()=>{
+  console.log("Component sắp được mount");
+  const isLogin = false;
+  if(!isLogin){
+    alert("bạn chưa đăng nhập")
+    // truyển về trang login
+  }
+})
+
+// onMounted gọi sau khi component mount
+onMounted(()=>{
+  console.log("Component đã được mount");
+})
+
+
 const props = defineProps({
   productsList: Array,
 });
