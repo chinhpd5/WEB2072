@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Laptop Acer Aspire 7",
       "description": "Laptop gaming giá rẻ cho sinh viên.",
       "price": 15000000,
@@ -19,7 +19,7 @@
       "featured": true
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "MacBook Air M1",
       "description": "Laptop nhẹ, hiệu năng cao cho lập trình viên.",
       "price": 22000000,
@@ -37,7 +37,7 @@
       "featured": false
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Dell XPS 13",
       "description": "Thiết kế cao cấp, hiệu năng ổn định.",
       "price": 28000000,
@@ -54,37 +54,20 @@
       "featured": true
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "HP Pavilion 15",
       "description": "Lựa chọn tầm trung cho công việc văn phòng.",
       "price": 17000000,
       "inStock": true,
       "isVisible": true,
       "category": "Laptop",
-      "rating": 4.0,
+      "rating": 4,
       "imageUrl": "https://cdn.hoanghamobile.com/i/previewV2/Uploads/2023/12/22/hp-15s-silver-1.png",
       "tags": [
         "office",
         "midrange"
       ],
       "quantity": 8,
-      "featured": false
-    },
-    {
-      "id": 5,
-      "name": "Lenovo IdeaPad 3",
-      "description": "Máy tính xách tay cơ bản cho học sinh.",
-      "price": 12000000,
-      "inStock": false,
-      "isVisible": false,
-      "category": "Laptop",
-      "rating": 3.9,
-      "imageUrl": "https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/07/11/lenovo-loq-15iax9-83fq0005vn-1.png",
-      "tags": [
-        "basic",
-        "student"
-      ],
-      "quantity": 0,
       "featured": false
     }
   ]

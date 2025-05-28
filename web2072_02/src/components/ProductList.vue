@@ -42,7 +42,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount, onMounted } from 'vue';
+import { onBeforeMount, onMounted, onUpdated, onBeforeUpdate, onBeforeUnmount,onUnmounted } from 'vue';
 
 // onBeforeMount: gọi trước khi component mount
 onBeforeMount(()=>{
@@ -57,6 +57,27 @@ onBeforeMount(()=>{
 // onMounted gọi sau khi component mount
 onMounted(()=>{
   console.log("Component đã được mount");
+})
+
+// onBeforeUpdate gọi trước khi component thay đổi
+onBeforeUpdate(() => {
+  console.log('Sắp cập nhật component (data vừa thay đổi).')
+})
+
+// onUpdated gọi sau khi component thay đổi
+onUpdated(() => {
+  console.log('Component đã được cập nhật.')
+})
+
+
+// gọi trước khi component bị xóa
+onBeforeUnmount(() => {
+  console.log('Component sắp bị huỷ.')
+})
+
+// gọi sau khi component bị xóa
+onUnmounted(() => {
+  console.log('Component đã bị huỷ.')
 })
 
 
