@@ -1,6 +1,9 @@
 <template>
   <div>
     <h1>Danh sách sản phẩm</h1>
+    <!-- <router-link to="/admin/product/add" class="btn btn-primary">Thêm mới</router-link> -->
+    <!-- <router-link to="product/add" class="btn btn-primary">Thêm mới</router-link> -->
+    <router-link :to="{name: 'product-add'}" class="btn btn-primary">Thêm mới</router-link>
     <table class="table">
       <thead>
         <tr>

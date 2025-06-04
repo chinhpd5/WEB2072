@@ -69,6 +69,34 @@
       ],
       "quantity": 8,
       "featured": false
+    },
+    {
+      "id": "cd77",
+      "name": "chinhpd5",
+      "description": "mô tả",
+      "price": 1000,
+      "isVisible": true,
+      "category": "Tablet",
+      "imageUrl": "abc",
+      "tags": [
+        "apple",
+        "developer"
+      ],
+      "quantity": 12
+    },
+    {
+      "id": "b6e4",
+      "name": "chinhpd5",
+      "description": "a",
+      "price": 123,
+      "isVisible": true,
+      "category": "Mobile",
+      "imageUrl": "abc",
+      "tags": [
+        "developer",
+        "apple"
+      ],
+      "quantity": 1
     }
   ]
 }
