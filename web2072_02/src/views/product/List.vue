@@ -33,6 +33,8 @@
           </td>
           <td>{{ item.description }}</td>
           <td>
+            <router-link :to="`/admin/product/detail/${item.id}`" class="btn btn-info">Chi tiết</router-link>
+            <router-link :to="{name: 'product-edit', params: {id: item.id}}" class="btn btn-warning">Sửa</router-link>
             <button @click="handleDelete(item.id)" class="btn btn-danger">Xóa</button>
           </td>
         </tr>

@@ -20,11 +20,11 @@
     },
     {
       "id": "2",
-      "name": "MacBook Air M1",
+      "name": "MacBook Air M1 update",
       "description": "Laptop nhẹ, hiệu năng cao cho lập trình viên.",
       "price": 22000000,
       "inStock": false,
-      "isVisible": true,
+      "isVisible": false,
       "category": "Laptop",
       "rating": 3.8,
       "imageUrl": "https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/11/16/mac-m1-ghi-1.png",
@@ -33,7 +33,7 @@
         "m1",
         "developer"
       ],
-      "quantity": 0,
+      "quantity": 100,
       "featured": false
     },
     {
@@ -85,18 +85,18 @@
       "quantity": 12
     },
     {
-      "id": "b6e4",
+      "id": "eb05",
       "name": "chinhpd5",
-      "description": "a",
-      "price": 123,
-      "isVisible": true,
+      "description": "123",
+      "price": 123453,
+      "isVisible": false,
       "category": "Mobile",
-      "imageUrl": "abc",
+      "imageUrl": "https://photo.znews.vn/w660/Uploaded/mdf_eioxrd/2021_07_06/2.jpg",
       "tags": [
-        "developer",
-        "apple"
+        "apple",
+        "developer"
       ],
-      "quantity": 1
+      "quantity": 12
     }
   ]
 }
