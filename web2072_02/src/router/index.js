@@ -9,6 +9,8 @@ import ProductList from '../views/product/List.vue';
 import ProductAdd from '../views/product/Add.vue';
 import ProductEdit from '../views/product/Edit.vue';
 import ProductDetail from '../views/product/Detail.vue';
+import Login from '../views/Login.vue';
+import Register from '../views/Register.vue';
 
 const router = createRouter({
   routes: [
@@ -18,6 +20,8 @@ const router = createRouter({
         {path: 'product', name: 'product', component: Product},
         {path: 'about', name: 'about', component: About},
         {path: 'product/:id', name: 'product-detail', component: ProductDetailClient},
+        {path: 'login', name:'login', component: Login},
+        {path: 'register', name:'register', component: Register},
       ]
     },
     {

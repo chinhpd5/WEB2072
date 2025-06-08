@@ -98,5 +98,17 @@
       ],
       "quantity": 12
     }
+  ],
+  "users": [
+    {
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "$2a$10$tZPiVQM9k3kwNyWGn7jam.73k2gv.TnKdjKORffkb4FpLVBRrTuGO",
+      "id": 1
+    },
+    {
+      "email": "ducchinh2652000@gmail.com",
+      "password": "$2a$10$Mf7iLYhJyQk1Oyu1Ffye6.hZT3BoYJ5yCvCtW.CbmmgJ72Er/28cm",
+      "id": 2
+    }
   ]
 }
