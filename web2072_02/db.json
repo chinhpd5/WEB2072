@@ -99,16 +99,30 @@
       "quantity": 12
     }
   ],
-  "users": [
+  "books": [
     {
-      "email": "chinhpd5@fpt.edu.vn",
-      "password": "$2a$10$tZPiVQM9k3kwNyWGn7jam.73k2gv.TnKdjKORffkb4FpLVBRrTuGO",
-      "id": 1
+      "id": "1",
+      "title": "The Art of Coding",
+      "views": 120,
+      "isPublish": true,
+      "imageUrl": "https://example.com/images/art-of-coding.jpg",
+      "category": "Technology"
     },
     {
-      "email": "ducchinh2652000@gmail.com",
-      "password": "$2a$10$Mf7iLYhJyQk1Oyu1Ffye6.hZT3BoYJ5yCvCtW.CbmmgJ72Er/28cm",
-      "id": 2
+      "id": "2",
+      "title": "Mastering UX Design",
+      "views": 85,
+      "isPublish": false,
+      "imageUrl": "https://example.com/images/ux-design.jpg",
+      "category": "Design"
+    },
+    {
+      "id": "3",
+      "title": "Agile Project Guide",
+      "views": 200,
+      "isPublish": true,
+      "imageUrl": "https://example.com/images/agile-guide.jpg",
+      "category": "Management"
     }
   ]
 }
