@@ -62,6 +62,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 | `text-end`       | Căn phải         |
 
 - Dáng chữ
+
 | Class             | Ý nghĩa                |
 | ----------------- | ---------------------- |
 | `text-lowercase`  | Viết thường toàn bộ    |
@@ -69,6 +70,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 | `text-capitalize` | Viết hoa chữ cái đầu   |
 
 - Kiểu chữ
+
 | Class                          | Ý nghĩa        |
 | ------------------------------ | -------------- |
 | `fw-bold`                      | Chữ đậm        |
@@ -77,6 +79,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 | `text-decoration-line-through` | Gạch ngang chữ |
 
 - Kích thức
+
 | Class   | Ý nghĩa              |
 | ------- | -------------------- |
 | `fs-1`  | Size 1 (lớn nhất)    |
