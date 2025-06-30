@@ -105,23 +105,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 ### Khoảng cách - spacing
 
 `Margin` (m) và `Padding` (p):
-| Thuộc tính | Ý nghĩa                 |
-| ---------- | ----------------------- |
-| `m-*`      | margin tất cả các phía  |
-| `mt-*`     | margin-top              |
-| `mb-*`     | margin-bottom           |
-| `ms-*`     | margin-left (start)     |
-| `me-*`     | margin-right (end)      |
-| `mx-*`     | margin-left-right       |
-| `my-*`     | margin-top-bottom       |
-| ---------- | ----------------------- |
-| `p-*`      | padding tất cả các phía |
-| `pt-*`     | padding-top             |
-| `pb-*`     | padding-bottom          |
-| `ps-*`     | padding-left (start)    |
-| `pe-*`     | padding-right (end)     |
-| `px-*`     | padding-left-right      |
-| `py-*`     | padding-top-bottom      |
+| Thuộc tính | Ý nghĩa                 | Thuộc tính | Ý nghĩa                 |
+| ---------- | ----------------------- | ---------- | ----------------------- |
+| `m-*`      | margin tất cả các phía  | `p-*`      | padding tất cả các phía |
+| `mt-*`     | margin-top              | `pt-*`     | padding-top             |
+| `mb-*`     | margin-bottom           | `pb-*`     | padding-bottom          | 
+| `ms-*`     | margin-left (start)     | `ps-*`     | padding-left (start)    |
+| `me-*`     | margin-right (end)      | `pe-*`     | padding-right (end)     |
+| `mx-*`     | margin-left-right       | `px-*`     | padding-left-right      |
+| `my-*`     | margin-top-bottom       | `py-*`     | padding-top-bottom      |
 
 `$space` : 0 - 5, `auto`
 > `auto` chỉ dành cho `margin`
