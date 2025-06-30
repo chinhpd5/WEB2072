@@ -54,6 +54,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ### Căn chỉnh văn bản
 - Vị trí
+
 | Class            | Ý nghĩa          |
 | ---------------- | ---------------- |
 | `text-start`     | Căn trái         |
@@ -160,16 +161,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 | `d-inline`, `d-inline-block` | Hiển thị inline            |
 | `d-flex`, `d-grid`           | Sử dụng layout flex / grid |
 
-- `d-flex`:
-`d-flex` là `class` của `Bootstrap` dùng để biến một phần tử thành một `"flex container"`, giúp bạn dễ dàng sắp xếp, căn chỉnh các phần tử con bên trong theo chiều ngang hoặc dọc.
+- `d-flex`: là `class` của `Bootstrap` dùng để biến một phần tử thành một `"flex container"`, giúp bạn dễ dàng sắp xếp, căn chỉnh các phần tử con bên trong theo chiều ngang hoặc dọc.
 
 + Chiều sắp xếp:
+
 | Class         | Mô tả                        |
 | ------------- | ---------------------------- |
 | `flex-row`    | (Mặc định) sắp xếp **ngang** |
 | `flex-column` | Sắp xếp **dọc**              |
 
 + `Justify Content` – Căn theo trục ngang (main axis)
+
 | Class                     | Mô tả                        |
 | ------------------------- | ---------------------------- |
 | `justify-content-start`   | Căn trái (mặc định)          |
@@ -180,6 +182,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 | `justify-content-evenly`  | Khoảng cách đều từng phần tử |
 
 + `Align Items` – Căn theo trục dọc (cross axis)
+
 | Class                 | Mô tả              |
 | --------------------- | ------------------ |
 | `align-items-start`   | Căn lên trên       |
