@@ -15,8 +15,10 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   </head>
   <body>
+    <!-- menu -->
     <nav class="navbar navbar-expand-lg " style="background-color: #ff89f5;" data-bs-theme="light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">WEB2072.04</a>
@@ -34,10 +36,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+              <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i> Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sản phẩm</a>
+              <a class="nav-link" href="#"><i class="bi bi-bag"></i> Sản phẩm</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -79,5 +81,27 @@
       </div>
     </nav>
 
+    <!-- banner -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000" style="height: 300px;">
+          <img src="https://intphcm.com/data/upload/mau-banner-online.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000" style="height: 300px;">
+          <img src="https://intphcm.com/data/upload/mau-banner-spa.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000" style="height: 300px;">
+          <img src="https://intphcm.com/data/upload/mau-banner-event.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </body>
 </html>
