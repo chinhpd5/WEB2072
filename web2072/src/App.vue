@@ -7,7 +7,7 @@ const gender = true;
 
 <template>
   <div>
-    <h1>Họ và tên: {{ name }}</h1>
+    <h1 class="text-danger">Họ và tên: {{ name }}</h1>
     <h2>Tuổi: {{ age }}</h2>
     <h3>Giới tính: {{ gender ? "Nam": "Nữ" }}</h3>
   </div>
