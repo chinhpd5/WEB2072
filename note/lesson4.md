@@ -35,15 +35,15 @@ Mục tiêu bài học:
 - npm hoặc yarn
 
 ### Khởi tạo project với Vite (đề xuất cho Vue 3)
-1. Mở terminal:
+- 1. Mở terminal:
 ```bash
   npm create vite@latest
 ```
 Nếu có câu hỏi `Proceed to install?` -> Nhấn `enter`
-2. Nhập tên project, Ví dụ: `web2072`.
-3. Chọn `Vue`.
-4. Chọn `JavaScript`.
-5. Di chuyển vào dự án, cài đặt thư viện, khởi chạy dự án
+- 2. Nhập tên project, Ví dụ: `web2072`.
+- 3. Chọn `Vue`.
+- 4. Chọn `JavaScript`.
+- 5. Di chuyển vào dự án, cài đặt thư viện, khởi chạy dự án
 ```bash
   cd web2072
   npm install
