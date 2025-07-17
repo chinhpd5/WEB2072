@@ -17,6 +17,7 @@
     <ul>
       <li v-for="(item,index) in jobs" :key="index">
         {{ item }}
+        <button @click="handleDeleteJob(index)" class="btn btn-danger">Xóa</button>
       </li>
     </ul>
   </div>
@@ -36,6 +37,11 @@ const handleAddJob = () => {
   // console.log(job.value);
   jobs.push(job.value)
   job.value = ""
+}
+
+const handleDeleteJob = (index) => {
+  // console.log(index);
+  jobs.splice(index,1);
 }
 </script>
 
