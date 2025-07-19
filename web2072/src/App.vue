@@ -12,12 +12,24 @@
 
     <hr>
     <!-- show -->
-    <button v-show="!isLogin" @click="isLogin = !isLogin" class="btn btn-primary">Đăng nhập</button>
+    <button v-show="!isLogin" @click="isLogin = !isLogin" class="btn btn-primary">
+      Đăng nhập
+    </button>
+
     <div v-show="isLogin">
       <h3>Xin chào, admin</h3>
-      <button @click="isLogin = !isLogin" class="btn btn-outline-danger">Đăng xuất</button>
+      <button @click="isLogin = !isLogin" class="btn btn-outline-danger">
+        Đăng xuất
+      </button>
     </div>
 
+    <hr>
+    <!-- for -->
+    <ul>
+      <li v-for="(item, index) in myArray" :key="index">
+        {{ item.name }} - {{ item.age }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -26,6 +38,11 @@ import { ref } from 'vue';
 
 const mark = Math.floor(Math.random()*10);
 const isLogin = ref(false);
+const myArray = [
+  {name: "Nguyễn Văn A", age: 20},
+  {name: "Nguyễn Văn B", age: 21},
+  {name: "Nguyễn Văn C", age: 22}
+];
 </script>
 
 <style>
