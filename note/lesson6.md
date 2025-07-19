@@ -1,123 +1,139 @@
-# Component trong VueJS
+# Vue.js 3 Directives (Chỉ thị) Điều kiện và Danh sách
 
-## Mục tiêu bài học
-- Hiểu về `Component` cơ bản
-- Sử dụng `Props` để truyền dữ liệu từ `Comoponent cha` xuống `Component con`
-- Sử dụng `Emit()` để gửi dữ liệu trừ `Component con` lên `Component cha`
-- Tìm hiểu `Slot`, `Prodive` và `Inject` để gửi dữ liệu mà không cần `Props`
+## 1. Giới thiệu về Directives
 
----
-## Component là gì ?
-- `Component` là một khối xây dựng cơ bản cho phép bạn chia nhỏ giao diện người dùng (UI) thành các phần nhỏ, độc lập và có thể tái sử dụng. 
-- Mỗi `component` có thể chứa HTML, CSS, và JavaScript riêng, giúp bạn dễ dàng quản lý và phát triển các phần khác nhau của ứng dụng.
-- Lý do cần sử dụng `Component`:
-  + Tái sử dụng: có thể dùng lại trong nhiều phần của ứng dụng, giảm thiểu lặp lại mã.
-  + Độc lập: Hoạt động độc lập, tương tác dữ liệu qua props và events.
-  + Đóng gói: Chứa HTML, CSS, và JS trong một khối duy nhất, dễ quản lý và bảo trì.
-  + Tổ chức cây: tổ chức thành một cây component lồng nhau, với component gốc ở đỉnh.
+Directives là các thuộc tính đặc biệt trong Vue.js được bắt đầu bằng tiền tố `v-`. Chúng được sử dụng để thêm các hành vi động cho DOM elements.
 
--  Mỗi `component` Vue trong một tệp riêng biệt với đuôi .vue - được gọi là Single-File Component (viết tắt SFC ) thường có 3 thành phần chính `Template` (HTML), `Script` (JavaScript), `Style` (CSS):
-- Tạo `component` có tên `Hello.vue`
+## 2. Các Directives điều kiện và vòng lặp cơ bản
+
+### v-if, v-else-if, v-else
+- **Mục đích**: Điều kiện render element
+- **Ví dụ**:
 ```vue
 <template>
-<div>
-  <h1>{{title}}</h1>
-  <button @click="greet">Click me!</button>
-</div>
+  <div v-if="score >= 90">Xuất sắc</div>
+  <div v-else-if="score >= 70">Khá</div>
+  <div v-else>Trung bình</div>
 </template>
 
 <script setup>
-import { ref } from"vue";
-
-const title = ref("Welcome to Vue Component");
-const message = ref("This is a reusable component.");
-
-function greet() {
-  console.log(message.value);
-}
-</script>
-
-<style scoped>
-h1 { color: blue; }
-</style>
-```
-
----
-## Props là gì?
-- `Props` (viết tắt của `properties`) là một cơ chế cho phép truyền dữ liệu từ `component cha` xuống `component con`
-- Là các thuộc tính mà `component cha` truyền xuống `component con` thông qua các `attribute` trong `template`.
-- `Props` giúp tái sử dụng `component` bằng cách làm cho `component` linh hoạt với các giá trị khác nhau.
-
-+ `ParentComponent.vue`:
-```vue
-<template>
-  <div>
-    <h1>Đây là component cha</h1>
-    <ChildComponent title="Xin chào Vue 3" :count="10" />
-  </div>
-</template>
-
-<script setup>
-import ChildComponent from './ChildComponent.vue'
+const score = 85
 </script>
 ```
 
-+ `ChildComponent.vue`:
+### v-show
+- **Mục đích**: Hiển thị/ẩn element dựa trên điều kiện (sử dụng CSS display)
+- **Ví dụ**:
 ```vue
 <template>
-  <div style="border: 1px solid gray; padding: 10px;">
-    <h2>{{ title }}</h2>
-    <p>Số đếm là: {{ count }}</p>
-  </div>
+  <div v-show="isVisible">Nội dung hiển thị</div>
 </template>
 
 <script setup>
-// Khai báo props sử dụng defineProps trong <script setup>
-const props = defineProps({
-  title: String,
-  count: Number
-})
-</script>
-
-```
-
----
-## Emit() là gì?
-- `emit` là cơ chế giúp `component con` gửi sự kiện lên `component cha`. 
-- Đây là cách giao tiếp từ dưới lên trên trong mô hình `component` — ngược lại với `props` (dùng để truyền dữ liệu từ cha xuống con).
-
-+ `ChildComponent.vue`
-```vue
-<template>
-  <button @click="increase">Tăng</button>
-</template>
-
-<script setup>
-const emit = defineEmits(['updateCount']) // Khai báo sự kiện emit
-
-function increase() {
-  emit('updateCount', 1) // Gửi sự kiện lên cha, kèm dữ liệu (ví dụ: số 1)
-}
+const isVisible = true
 </script>
 ```
 
-+ `ParentComponent.vue`:
+### v-for
+- **Mục đích**: Render danh sách các element
+- **Ví dụ**:
 ```vue
 <template>
-  <div>
-    <h1>Giá trị: {{ count }}</h1>
-    <ChildComponent @updateC  ount="handleUpdate" />
-  </div>
+  <ul>
+    <li v-for="(item, index) in items" :key="index">
+      {{ item.name }}
+    </li>
+  </ul>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import ChildComponent from './ChildComponent.vue'
-
-const count = ref(0)
-
-function handleUpdate(value) {
-  count.value += value
-}
+const items = [
+  { name: 'Item 1' },
+  { name: 'Item 2' },
+  { name: 'Item 3' }
+]
 </script>
+```
+
+## 3. Bài tập
+Yêu cầu:
+- Sử dụng `v-for` để duyệt mảng `products` hiển thị danh sách sản phẩm theo table (bootstrap)
+- `name`: Tên sản phẩm
+- `description`: Mô tả
+- `price`: Giá bán
+- `inStock`: Trạng thái còn hàng, Sử dụng `v-if` `v-else` hiển thị số lượng sản phẩm `quantity` nếu `inStock = true`; `Hết hàng` nếu `inStock = false`
+- `category`: Danh mục
+- `rating`: Đánh giá, Sử dụng `v-if`, `v-else-if`, `v-else` để hiện thị số `⭐` sản phẩm , Lưu ý làm tròn xuống (Ví dụ: 2,3 = `⭐⭐`)
+- `imageUrl`: Hình ảnh, sử dụng thẻ `img`
+- `tags`: Danh sách thẻ tag, Sử dụng `v-for` để hiển thị danh sách `tags`
+- `featured`: Ứng dụng `v-show` để hiển thị `Sản phẩm nổi bật` nếu `featured = true` hoặc ` ` nếu `featured = false`
+```js
+const products = [
+  {
+    id: 1,
+    name: 'Laptop Acer Aspire 7',
+    description: 'Laptop gaming giá rẻ cho sinh viên.',
+    price: 15000000,
+    inStock: true,
+    category: 'Laptop',
+    rating: 4.2,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2022/10/03/image-removebg-preview-60.png',
+    tags: ['gaming', 'student', 'budget'],
+    quantity: 10,
+    featured: true
+  },
+  {
+    id: 2,
+    name: 'MacBook Air M1',
+    description: 'Laptop nhẹ, hiệu năng cao cho lập trình viên.',
+    price: 22000000,
+    inStock: false,
+    category: 'Laptop',
+    rating: 3.8,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/11/16/mac-m1-ghi-1.png',
+    tags: ['apple', 'm1', 'developer'],
+    quantity: 0,
+    featured: false
+  },
+  {
+    id: 3,
+    name: 'Dell XPS 13',
+    description: 'Thiết kế cao cấp, hiệu năng ổn định.',
+    price: 28000000,
+    inStock: true,
+    category: 'Laptop',
+    rating: 2.6,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/10/17/71034921-1.png',
+    tags: ['premium', 'portable'],
+    quantity: 5,
+    featured: true
+  },
+  {
+    id: 4,
+    name: 'HP Pavilion 15',
+    description: 'Lựa chọn tầm trung cho công việc văn phòng.',
+    price: 17000000,
+    inStock: true,
+    category: 'Laptop',
+    rating: 4.0,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2023/12/22/hp-15s-silver-1.png',
+    tags: ['office', 'midrange'],
+    quantity: 8,
+    featured: false
+  },
+  {
+    id: 5,
+    name: 'Lenovo IdeaPad 3',
+    description: 'Máy tính xách tay cơ bản cho học sinh.',
+    price: 12000000,
+    inStock: false,
+    category: 'Laptop',
+    rating: 3.9,
+    imageUrl: 'https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/07/11/lenovo-loq-15iax9-83fq0005vn-1.png',
+    tags: ['basic', 'student'],
+    quantity: 0,
+    featured: false
+  },
+];
+
 ```
