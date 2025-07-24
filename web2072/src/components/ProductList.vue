@@ -47,7 +47,9 @@
             <span v-show="item.featured">Sản phẩm nổi bật</span>
           </td>
           <td>{{ item.description }}</td>
-          <td></td>
+          <td>
+            <button @click="handleDelete(item.id)" class="btn btn-danger">Xóa</button>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -58,8 +60,16 @@
 const props = defineProps({
   list: Array,
 });
-
+const emit = defineEmits(['delete'])
 // console.log(props);
+
+// gửi dữ liệu từ con lên cha -> emit
+const handleDelete = (id) =>{
+  // console.log(id);
+  if(window.confirm("bạn có muốn xóa không?")){
+    emit('delete',id)
+  }
+}
 </script>
 
 <style></style>

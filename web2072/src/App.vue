@@ -3,18 +3,19 @@
     <!-- <MyComponent></MyComponent> -->
     <!-- <MyComponent :name="myName" :age="myAge" :gender="myGender"/>
     <MyComponent name="Nguyễn Văn A" :age="21" :gender="false" /> -->
-    <ProductList :list="products" />
+    <ProductList :list="products" @delete="deleteProduct" />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import MyComponent from './components/MyComponent.vue';
 import ProductList from './components/ProductList.vue';
 
 const myName = "chinhpd5";
 const myAge = 20;
 const myGender = true;
-const products = [
+let products = ref([
   {
     id: 1,
     name: 'Laptop Acer Aspire 7',
@@ -80,9 +81,14 @@ const products = [
     quantity: 0,
     featured: false
   },
-];
+])
 
-
+const deleteProduct = (value) =>{
+  // console.log(value);
+  products.value = products.value.filter((item) => {
+    return item.id != value
+  })
+}
 </script>
 
 <style scoped>
