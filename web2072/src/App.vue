@@ -3,6 +3,7 @@
     <!-- <MyComponent></MyComponent> -->
     <!-- <MyComponent :name="myName" :age="myAge" :gender="myGender"/>
     <MyComponent name="Nguyễn Văn A" :age="21" :gender="false" /> -->
+    <ProductAdd />
     <ProductList :list="products" @delete="deleteProduct" />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import { ref } from 'vue';
 import MyComponent from './components/MyComponent.vue';
 import ProductList from './components/ProductList.vue';
+import ProductAdd from './components/ProductAdd.vue';
 
 const myName = "chinhpd5";
 const myAge = 20;
