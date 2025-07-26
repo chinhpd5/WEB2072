@@ -62,6 +62,20 @@
         </div>
       </div>
 
+      <div class="mb-3">
+        <label for="" class="form-label">Danh mục</label>
+        <select class="form-select" v-model="product.category">
+          <option value="Laptop">Laptop</option>
+          <option value="Mobile">Mobile</option>
+          <option value="Tablet">Tablet</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Mô tả</label>
+        <textarea class="form-control" id="description" rows="3" v-model="product.description"></textarea>
+      </div>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
