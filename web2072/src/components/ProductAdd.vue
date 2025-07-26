@@ -3,6 +3,11 @@
     <h1>Thêm mới sản phẩm</h1>
     <form @submit.prevent="handleSubmit">
       <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input type="number" class="form-control" id="id" v-model="product.id">
+      </div>
+
+      <div class="mb-3">
         <label for="name" class="form-label">Tên sản phẩm</label>
         <input type="text" class="form-control" id="name" v-model="product.name">
       </div>
@@ -83,6 +88,7 @@
 
 <script setup>
 import { ref } from 'vue';
+const emit = defineEmits(['add']);
 
 const product = ref({
   // name: "abc"
@@ -91,8 +97,15 @@ const product = ref({
 })
 
 const handleSubmit = () => {
-  console.log(product.value);
+  // console.log(product.value);
+  emit('add', product.value)
 
+  product.value = {
+    name: '',
+    imageUrl: '',
+    price: null,
+    
+  }
 }
 </script>
 

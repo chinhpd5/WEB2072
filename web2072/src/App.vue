@@ -3,7 +3,7 @@
     <!-- <MyComponent></MyComponent> -->
     <!-- <MyComponent :name="myName" :age="myAge" :gender="myGender"/>
     <MyComponent name="Nguyễn Văn A" :age="21" :gender="false" /> -->
-    <ProductAdd />
+    <ProductAdd @add="addProduct" />
     <ProductList :list="products" @delete="deleteProduct" />
   </div>
 </template>
@@ -90,6 +90,11 @@ const deleteProduct = (value) =>{
   products.value = products.value.filter((item) => {
     return item.id != value
   })
+}
+
+const addProduct = (value) => {
+  // console.log(value);
+  products.value.push(value)
 }
 </script>
 
