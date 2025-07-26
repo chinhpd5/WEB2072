@@ -16,7 +16,28 @@
         <label for="price" class="form-label">Giá bán</label>
         <input type="number" class="form-control" id="price" v-model="product.price">
       </div>
-      
+
+      <div class="mb-3">
+        <label for="" class="form-label">Trạng thái</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="inStock" id="inStock" :value="true" v-model="product.inStock">
+          <label class="form-check-label" for="inStock">
+            Còn hàng
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="inStock" id="outStock" :value="false" v-model="product.inStock">
+          <label class="form-check-label" for="outStock">
+            Hết hàng
+          </label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Số lượng</label>
+        <input type="number" class="form-control" id="quantity" v-model="product.quantity" :disabled="!product.inStock">
+      </div>
+
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
@@ -27,11 +48,12 @@ import { ref } from 'vue';
 
 const product = ref({
   // name: "abc"
+  // inStock: true
 })
 
-const handleSubmit = () =>{
+const handleSubmit = () => {
   console.log(product.value);
-  
+
 }
 </script>
 
