@@ -44,8 +44,9 @@ const deleteProduct = (value) =>{
   })
 }
 
-const addProduct = (value) => {
+const addProduct = async (value) => {
   // console.log(value);
+  await axios.post(`http://localhost:3000/products`,value)
   products.value.push(value)
 }
 </script>

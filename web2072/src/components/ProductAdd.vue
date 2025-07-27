@@ -2,10 +2,10 @@
   <div class="container">
     <h1>Thêm mới sản phẩm</h1>
     <form @submit.prevent="handleSubmit">
-      <div class="mb-3">
+      <!-- <div class="mb-3">
         <label for="id" class="form-label">ID</label>
         <input type="number" class="form-control" id="id" v-model="product.id">
-      </div>
+      </div> -->
 
       <div class="mb-3">
         <label for="name" class="form-label">Tên sản phẩm</label>
