@@ -1,13 +1,19 @@
 <template>
   <div class="container">
-    <h1>LifeCycle</h1>
+    <h1 @click="handleChangeTitle">{{ title }}</h1>
+    
   </div>
 </template>
 
 <script setup>
-import {onBeforeMount, onMounted } from 'vue';
+import {onBeforeMount, onMounted, onBeforeUpdate, onUpdated, ref } from 'vue';
 
 const isLogin = true;
+const title = ref('LifeCycle');
+
+const handleChangeTitle = () => {
+  title.value = 'LifeCycle update'
+}
 
 // gọi trước component được mount vào DOM
 onBeforeMount(()=>{
@@ -22,7 +28,15 @@ onMounted(() => {
   console.log('onMounted - Gọi sau khi component được mount');
 })
 
+// Gọi trước component có sự thay đổi
+onBeforeUpdate(() =>{
+  console.log('onBeforeUpdate');
+})
 
+// Gọi sau khi component đã thay đổi xong
+onUpdated(() =>{
+  console.log('onUpdated');
+})
 </script>
 
 <style>
