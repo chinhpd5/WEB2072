@@ -3,7 +3,8 @@
     <!-- <MyComponent></MyComponent> -->
     <!-- <MyComponent :name="myName" :age="myAge" :gender="myGender"/>
     <MyComponent name="Nguyễn Văn A" :age="21" :gender="false" /> -->
-    <LifeCycle />
+    <LifeCycle v-if="isShow" />
+    <button @click="isShow = !isShow" class="btn btn-danger">Toggle</button>
     <ProductAdd @add="addProduct" />
     <ProductList :list="products" @delete="deleteProduct" />
   </div>
@@ -86,6 +87,7 @@ let products = ref([
     featured: false
   },
 ])
+const isShow = ref(true)
 
 const deleteProduct = (value) =>{
   // console.log(value);

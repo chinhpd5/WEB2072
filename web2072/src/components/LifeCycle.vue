@@ -6,7 +6,7 @@
 </template>
 
 <script setup>
-import {onBeforeMount, onMounted, onBeforeUpdate, onUpdated, ref } from 'vue';
+import {onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted, ref } from 'vue';
 
 const isLogin = true;
 const title = ref('LifeCycle');
@@ -36,6 +36,16 @@ onBeforeUpdate(() =>{
 // Gọi sau khi component đã thay đổi xong
 onUpdated(() =>{
   console.log('onUpdated');
+})
+
+// Gọi ra trước khi component bị xóa
+onBeforeUnmount(() => {
+  console.log('onBeforeUnmount');
+})
+
+// Gọi ra sau khi component bị xóa
+onUnmounted(() => {
+  console.log('onUnmounted');
 })
 </script>
 
