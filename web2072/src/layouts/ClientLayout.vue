@@ -50,7 +50,11 @@
         </div>
       </nav>
     </div>
-    <router-view />
+    
+    <div class="container">
+      <router-view />
+    </div>
+
     <h1>Client Footer</h1>
   </div>
 </template>
