@@ -20,6 +20,8 @@ npm i vue-router
 
 - Tạo file `src/router/index.js`:
 ```js
+import {createRouter, createWebHistory} from 'vue-router';
+
 const router = createRouter({
   routes: [
     {path: '/', name: 'home-page', component: Home},
