@@ -24,7 +24,7 @@
           <td>{{ item.category }}</td>
           <td>{{ item.description }}</td>
           <td>
-
+            <button @click="handleDelete(item.id)" class="btn btn-danger">Xóa</button>
           </td>
         </tr>
         
@@ -50,6 +50,23 @@ onMounted(async() => {
   }
 
 })
+
+const handleDelete = async (id) => {
+  // console.log(id);
+  try {
+    if(window.confirm("Bạn có chắc chắn muốn xóa không?")){
+      await instance.delete(`/products/${id}`)
+
+      // cập nhật giao diện
+      products.value = products.value.filter((item)=>{
+        return item.id != id
+      })
+    }    
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 </script>
 
 <style></style>

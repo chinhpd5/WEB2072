@@ -81,20 +81,6 @@
       ],
       "quantity": 0,
       "featured": false
-    },
-    {
-      "id": "405d",
-      "tags": [
-        "Apple",
-        "Sony"
-      ],
-      "name": "chinhpd5",
-      "imageUrl": "https://cdn.hoanghamobile.com/i/previewV2/Uploads/2024/11/16/mac-m1-ghi-1.png",
-      "price": 123,
-      "inStock": true,
-      "quantity": 123,
-      "category": "Laptop",
-      "description": "mô tả"
     }
   ]
 }
