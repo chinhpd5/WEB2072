@@ -25,6 +25,9 @@
           <td>{{ item.description }}</td>
           <td>
             <button @click="handleDelete(item.id)" class="btn btn-danger">Xóa</button>
+            <router-link class="btn btn-success" :to="`/admin/product/detail/${item.id}`">Chi tiết</router-link>
+            <!-- <router-link class="btn btn-success" :to="`product/detail/${item.id}`">Chi tiết</router-link> -->
+            <!-- <router-link class="btn btn-success" :to="{name: 'product-detail', params: {'id': item.id}}">Chi tiết</router-link> -->
           </td>
         </tr>
         
