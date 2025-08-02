@@ -81,6 +81,29 @@
       ],
       "quantity": 0,
       "featured": false
+    },
+    {
+      "id": "3475",
+      "tags": [
+        "apple",
+        "oppo"
+      ],
+      "name": "chinhpd5",
+      "price": 123,
+      "quantity": 10,
+      "imageUrl": "https://cdn.hoanghamobile.com/Uploads/2024/09/10/iphone-16-pro-sa-mac-1.png;trim.threshold=80;trim.percentpadding=0.5;width=180;height=180;mode=pad;",
+      "category": "tablet"
+    },
+    {
+      "id": "d8fb",
+      "tags": [
+        "samsung"
+      ],
+      "name": "chinhpd5",
+      "price": 123,
+      "quantity": 10,
+      "imageUrl": "https://cdn.hoanghamobile.com/Uploads/2024/09/10/iphone-16-pro-sa-mac-1.png;trim.threshold=80;trim.percentpadding=0.5;width=180;height=180;mode=pad;",
+      "category": "laptop"
     }
   ]
 }

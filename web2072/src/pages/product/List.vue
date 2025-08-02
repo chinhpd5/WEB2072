@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link class="btn btn-primary" to="/admin/product/add">Thêm mới</router-link>
     <h1>Danh sách sản phẩm</h1>
     <table class="table table-bordered table-striped table-hover">
       <thead>

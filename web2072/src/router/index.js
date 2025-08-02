@@ -6,6 +6,7 @@ import ProductDetailPage from '../pages/ProductDetailPage.vue';
 import AdminLayout from '../layouts/AdminLayout.vue';
 import ListProduct from '../pages/product/List.vue';
 import DetailProduct from '../pages/product/Detail.vue';
+import AddProduct from '../pages/product/Add.vue';
 
 const router = createRouter({
   routes: [
@@ -19,7 +20,8 @@ const router = createRouter({
     {
       path: '/admin', component: AdminLayout, children: [
         {path: 'product', component: ListProduct, name: 'product-list'},
-        {path: 'product/detail/:id', component: DetailProduct, name: 'product-detail'}
+        {path: 'product/detail/:id', component: DetailProduct, name: 'product-detail'},
+        {path: 'product/add', component: AddProduct, name: 'product-add'},
       ]
     }
   ],
