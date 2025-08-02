@@ -100,9 +100,9 @@ const validate = () => {
 
   if(product.value.price == null || product.value.price == '' || product.value.price == undefined || isNaN(Number(product.value.price)) || product.value.price < 0){
     isValid = false;
-    error.quantity = "Không được để trống Giá bán hoặc sai định dạng hoặc nhỏ hơn 0"
+    error.price = "Không được để trống Giá bán hoặc sai định dạng hoặc nhỏ hơn 0"
   }else{
-    error.quantity= null;
+    error.price= null;
   }
 
   if(product.value.imageUrl == null || product.value.imageUrl == '' || product.value.imageUrl == undefined){
