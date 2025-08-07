@@ -105,5 +105,42 @@
       "imageUrl": "https://cdn.hoanghamobile.com/Uploads/2024/09/10/iphone-16-pro-sa-mac-1.png;trim.threshold=80;trim.percentpadding=0.5;width=180;height=180;mode=pad;",
       "category": "laptop"
     }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Điện thoại",
+      "count": 120,
+      "image": "https://example.com/images/phone.jpg",
+      "note": "Sản phẩm mới về"
+    },
+    {
+      "id": 2,
+      "title": "Laptop",
+      "count": 80,
+      "image": "https://example.com/images/laptop.jpg",
+      "note": "Giảm giá sốc"
+    },
+    {
+      "id": 3,
+      "title": "Máy ảnh",
+      "count": 45,
+      "image": "https://example.com/images/camera.jpg",
+      "note": "Sắp hết hàng"
+    },
+    {
+      "id": 4,
+      "title": "Phụ kiện",
+      "count": 300,
+      "image": "https://example.com/images/accessories.jpg",
+      "not": "Nhiều lựa chọn"
+    },
+    {
+      "id": 5,
+      "title": "Đồng hồ thông minh",
+      "count": 60,
+      "image": "https://example.com/images/watch.jpg",
+      "note": "Hàng bán chạy"
+    }
   ]
 }

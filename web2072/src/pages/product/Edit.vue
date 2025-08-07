@@ -140,8 +140,8 @@ const validate = () => {
 }
 
 const hanldeSubmit = async () => {
-  console.log(error);
-  console.log(validate());
+  // console.log(error);
+  // console.log(validate());
   
   if (!validate()) {
     return;
